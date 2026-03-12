@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>CU Quants Bot</title>
+</head>
+<body>
+
+<h1>CU Quants Chatbot Demo</h1>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "a575c124-043b-4dff-8952-20ec67f7b631", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "0213f0c2-07bc-4444-b351-e91cc49f6796", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
